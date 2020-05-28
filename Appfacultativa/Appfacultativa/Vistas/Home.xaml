@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" 
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             
+             
+             
+             x:Class="Appfacultativa.Vistas.Home" Title="Lorem Ipsum" NavigationPage.HasNavigationBar="False">
+  
+  <StackLayout>
+        <StackLayout>
+            <Grid RowSpacing="0">
+                <border:SfBorder BackgroundColor="White"
+                                 BorderWidth="0"
+                                 HeightRequest="55">
+                    <StackLayout HorizontalOptions="Start" Padding="20,10">
+                        <Label Text="Lorem Ipsum" TextColor="Black" FontAttributes="Bold" FontSize="23"></Label>
+                        
+                    </StackLayout>
+                    
+                    
+                </border:SfBorder>
+            </Grid>
+        </StackLayout> 
+       
+        <ScrollView
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All">
+           <StackLayout
+                Padding="20,10">
+                 <StackLayout
+                    Margin="0,0,0,20"
+                    Padding="0,0,80,0">
+                    <Label FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="22"
+                           Text="Bienvenido"/>
+                    <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
+                </StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="150"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Boton nuevo cliente-->
+
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#5579C7"/>
+                                                    <gradient:SfGradientStop Color="#5579C7"/>
+                                                    <gradient:SfGradientStop Color="#5579C7"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="plus.png"
+                                           x:Name="nuevocliente">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Btnaddcliente_Clicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center"
+                                       Text="Nuevo"
+                                   TextColor="#5579C7"                                  
+                                  FontAttributes="Bold"
+                                   FontSize="15"/>
+
+                        </StackLayout>
+
+                    </border:SfBorder>
+
+                    <!--Boton clientes-->
+
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Grid.Column="2"
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#AAB0E9"/>
+                                                    <gradient:SfGradientStop Color="#AAB0E9"/>
+                                                    <gradient:SfGradientStop Color="#AAB0E9"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="group.png"
+                                           x:Name="clientes">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Btnclientes_Clicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center"
+                                       Text="Clientes"
+                                   TextColor="#AAB0E9"
+                                   FontSize="15"
+                                   FontAttributes="Bold"/>
+
+                        </StackLayout>
+
+                    </border:SfBorder>
+
+                    <!--prestamos-->
+
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Grid.Row="1"
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#02C768"/>
+                                                    <gradient:SfGradientStop Color="#02C768"/>
+                                                    <gradient:SfGradientStop Color="#02C768"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="nuevo.png"
+                                           x:Name="prestamo">
+
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center"
+                                       Text="Prestamo"
+                                   TextColor="#02C768"
+                                   FontAttributes="Bold"
+                                   FontSize="15"/>
+
+                        </StackLayout>
+
+                    </border:SfBorder>
+
+                    <!--Prestamos-->
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Grid.Row="1"
+                                     Grid.Column="2"
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#FDC250" Offset="0.9"/>
+                                                    <gradient:SfGradientStop Color="#FDC250" Offset="0.4"/>
+                                                    <gradient:SfGradientStop Color="#FDC250" Offset="1.0"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="dollar.png"
+                                           x:Name="list">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Btnaddcliente_Clicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center"
+                                       Text="Creditos"
+                                   FontAttributes="Bold"
+                                   TextColor="#FDC250"
+                                   FontSize="15"/>
+
+                        </StackLayout>
+
+                    </border:SfBorder>
+                    <!--Boton pagos-->
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Grid.Row="2"
+                                     Grid.Column="0"
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                                     VerticalOptions="CenterAndExpand">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#FE7582"/>
+                                                    <gradient:SfGradientStop Color="#FE7582"/>
+                                                    <gradient:SfGradientStop Color="#FE7582"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="card.png"
+                                           x:Name="pagos">
+
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center"
+                                       Text="Pagos"
+                                   TextColor="#FE7582"
+                                   FontAttributes="Bold"
+                                   FontSize="15"/>
+
+                        </StackLayout>
+
+                    </border:SfBorder>
+
+
+                    <!--Boton Caluladora-->
+
+                    <border:SfBorder BackgroundColor="White"
+                                     BorderWidth="0"
+                                     CornerRadius="25"
+                                     Grid.Row="2"
+                                     Grid.Column="2"                                  
+                                     Margin="0,0,0,10"
+                                     Opacity="1">
+                        <StackLayout HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+                            <border:SfBorder
+                                BorderWidth="0"
+                                CornerRadius="30"
+                                HeightRequest="60"
+                                Margin="0,0,0,5"
+                                WidthRequest="60">
+                                <AbsoluteLayout>
+                                    <gradient:SfGradientView
+                                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                        AbsoluteLayout.LayoutFlags="All">
+                                        <gradient:SfGradientView.BackgroundBrush>
+                                            <gradient:SfLinearGradientBrush>
+                                                <gradient:SfLinearGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#D34CF4"/>
+                                                    <gradient:SfGradientStop Color="#D34CF4"/>
+                                                    <gradient:SfGradientStop Color="#D34CF4"/>
+                                                </gradient:SfLinearGradientBrush.GradientStops>
+                                            </gradient:SfLinearGradientBrush>
+                                        </gradient:SfGradientView.BackgroundBrush>
+
+                                    </gradient:SfGradientView>
+                                    <Image AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Source="list.png"
+                                           x:Name="calcular">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Btncalculaprestamo_Clicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </AbsoluteLayout>
+
+
+
+
+
+                            </border:SfBorder>
+                            <Label HorizontalOptions="Center" Text="Calcular" TextColor="#D34CF4" FontSize="15" FontAttributes="Bold"/>
+
+
+
+                        </StackLayout>
+
+
+
+                    </border:SfBorder>
+
+
+
+
+
+                </Grid>
+            </StackLayout>
+
+
+
+        </ScrollView>
+  </StackLayout>
+
+
+
+
+
+</ContentPage>

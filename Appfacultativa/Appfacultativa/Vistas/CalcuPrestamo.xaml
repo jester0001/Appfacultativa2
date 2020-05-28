@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"             
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.CalcuPrestamo" Title="Calculadora de Prestamos">
+    <ContentPage.Resources>
+        <Style TargetType="Button"
+               ApplyToDerivedTypes="True"
+               CanCascade="True">
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="BackgroundColor" Value="#1976D2"/>
+            <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="White"/>
+
+        </Style>
+
+    </ContentPage.Resources>
+
+    <TableView Intent="Form">
+        <TableSection Title="Datos">
+            <EntryCell x:Name="montopres"
+                       Label="Monto a prestar:"
+                       Placeholder="Moneda Local"
+                       Keyboard="Numeric"/>
+            <EntryCell x:Name="Tasainter"
+                       Label="Tasa de Interes(%):"
+                       Placeholder="Porcentaje del 1 al 100"
+                       Keyboard="Numeric"/>
+            <EntryCell x:Name="cuotas"
+                       Label="N° de Cuotas:"
+                       Keyboard="Numeric"/>
+        </TableSection>
+        <TableSection>
+            <ViewCell>
+                <ViewCell.View>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+
+                            </Grid.ColumnDefinitions>
+                            <buttons:SfButton x:Name="btncalcular" 
+                                    Text="Calcular"
+                                    FontSize="20"
+                                    CornerRadius="25"
+                                    Grid.Column="1"
+                                    Clicked="btncalcular_Clicked">
+                                <buttons:SfButton.BackgroundGradient>
+                                    <gradient:SfRadialGradientBrush Radius="3">
+                                        <gradient:SfRadialGradientBrush.GradientStops>
+                                            <gradient:SfGradientStop Color="#2F9BDF" Offset="0"/>
+                                            <gradient:SfGradientStop Color="#279ce6" Offset="1"/>
+                                        </gradient:SfRadialGradientBrush.GradientStops>
+                                    </gradient:SfRadialGradientBrush>
+                                </buttons:SfButton.BackgroundGradient>
+
+
+                            </buttons:SfButton>
+
+                        </Grid>
+                    </StackLayout>
+                </ViewCell.View>
+
+            </ViewCell>
+
+        </TableSection>
+        <TableSection Title="Resultados">
+            <TextCell x:Name="lblMonto"
+                      Text="Monto Total:"
+                      Detail="$0"/>
+            <TextCell x:Name="lblintereses"
+                      Text="Intereses"
+                      Detail="$0"/>
+            <TextCell x:Name="lbltintereses"
+                      Text="Total intereses"
+                      Detail="$0"/>
+            <TextCell x:Name="lblcuota"
+                      Text="Pago Por Cuota"
+                      Detail="$0"/>
+
+
+        </TableSection>
+
+    </TableView>
+
+</ContentPage>

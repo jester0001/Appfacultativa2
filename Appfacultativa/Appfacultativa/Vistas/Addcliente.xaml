@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:Behaviors="clr-namespace:Appfacultativa.Validaciones"
+             
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.Addcliente" Title="Registro Nuevo Cliente" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
+                <Setter Property="FontSize" Value="18"></Setter>
+
+            </Style>
+            <Style TargetType="border:SfBorder">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="BorderColor" Value="Transparent"></Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="BorderWidth" Value="1"></Setter>
+
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="Margin" Value="15,0"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+            </Style>
+
+            <Style TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="ContainerBackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="FocusedColor" Value="#5579C7"></Setter>
+                <Setter Property="UnfocusedColor" Value="LightGray"></Setter>
+                <Setter Property="OutlineCornerRadius" Value="8"></Setter>
+                <Setter Property="InputViewPadding" Value="6"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- todo el navbar y la media luna del color de la funcion que se haya ejecutado -->
+    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <border:SfBorder BackgroundColor="#5579C7"
+                                 BorderWidth="0"
+                                 HeightRequest="50"
+                                 Grid.Row="0">
+                <StackLayout HorizontalOptions="Start" Padding="20,10">
+                    <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                        <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="backarrow"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+
+
+                    </border:SfBorder>
+                </StackLayout>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forclientes.png" Aspect="AspectFill"></Image>
+
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Nuevo Cliente" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
+
+            <!--Tarjeta de visualizacion y edicion de datos-->
+
+            <StackLayout Grid.Row="2" Padding="20">
+                <border:SfBorder Grid.Row="2" Padding="20" HeightRequest="450" WidthRequest="70" CornerRadius="15">
+                    <StackLayout>
+                        <border:SfBorder>
+                            <!--`Nombre-->
+
+                            <inputLayout:SfTextInputLayout
+                        ContainerType="Outlined"
+                        Hint="Nombre o Alias">
+                                <Entry 
+                           x:Name="txtnombrecliente"
+                           Text="{Binding nombre}"
+                                    >
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+
+
+                        </border:SfBorder>
+
+                        <!--movil-->
+                        <border:SfBorder>
+
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Telefono">
+                                <Entry x:Name="numcel"
+                           Keyboard="Telephone"
+                           Text="{Binding telefono}">
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                        </border:SfBorder>
+
+                        <!--Cedula-->
+                        <border:SfBorder>
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Cedula">
+
+                                <Entry Text="{Binding cedula}">
+                                    <Entry.Behaviors>
+                                        <Behaviors:MaskedBehavior Mask="XXX-XXXXXX-XXXXX"></Behaviors:MaskedBehavior>
+
+                                    </Entry.Behaviors>
+
+                                </Entry>
+
+                            </inputLayout:SfTextInputLayout>
+
+                        </border:SfBorder>
+                        <!-- Email-->
+                        <border:SfBorder>
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Email">
+
+                                <Entry 
+                           Keyboard="Email"
+                           Text="{Binding email}">
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+
+                        </border:SfBorder>
+                        <!--Direccion-->
+                        <border:SfBorder>
+                            <inputLayout:SfTextInputLayout ContainerType="Outlined" Hint="Direccion">
+                                <Entry Text="{Binding direccion}">
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+
+                        </border:SfBorder>
+                        
+                        <!--Boton guardar-->
+                        <buttons:SfButton
+                    HorizontalOptions="Center"
+                    Margin="0,24,0,0"
+                    Text="Guardar"
+                    FontSize="16"
+                    WidthRequest="200"
+                            HeightRequest="50"
+                    CornerRadius="25"
+                    x:Name="btaddcliente"
+                    Clicked="btaddcliente_Clicked">
+                            <buttons:SfButton.BackgroundGradient>
+                                <gradient:SfRadialGradientBrush Radius="3">
+                                    <gradient:SfRadialGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#5579C7" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#5579C7" Offset="1"/>
+                                    </gradient:SfRadialGradientBrush.GradientStops>
+                                </gradient:SfRadialGradientBrush>
+                            </buttons:SfButton.BackgroundGradient>
+                        </buttons:SfButton>
+                    </StackLayout>
+                </border:SfBorder>
+            </StackLayout>
+
+
+
+
+        </Grid>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</ContentPage>

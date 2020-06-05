@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"             
              mc:Ignorable="d"
-             x:Class="Appfacultativa.Vistas.CalcuPrestamo" Title="Calculadora de Prestamos">
+             x:Class="Appfacultativa.Vistas.CalcuPrestamo" Title="Calculadora de Prestamos" NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <Style TargetType="Button"
                ApplyToDerivedTypes="True"
@@ -21,73 +22,148 @@
 
     </ContentPage.Resources>
 
-    <TableView Intent="Form">
-        <TableSection Title="Datos">
-            <EntryCell x:Name="montopres"
+    <!-- todo el navbar y la media luna del color de la funcion que se haya ejecutado -->
+
+    <!--<ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">-->
+    <AbsoluteLayout>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Falsa Navbar-->
+            <border:SfBorder BackgroundColor="#D34CF4"
+                             BorderWidth="0"
+                             HeightRequest="50"
+                             Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boton Back-->
+                    <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
+                        <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="backarrow"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+
+
+
+                </Grid>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forcalcular.png" Aspect="AspectFill"></Image>
+
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Calcular Prestamo" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
+
+
+
+            <!--Lista de clientes-->
+
+
+            <StackLayout Grid.Row="2">
+                <TableView Intent="Form">
+                    <TableSection Title="Datos">
+                        <EntryCell x:Name="montopres"
                        Label="Monto a prestar:"
                        Placeholder="Moneda Local"
                        Keyboard="Numeric"/>
-            <EntryCell x:Name="Tasainter"
+                        <EntryCell x:Name="Tasainter"
                        Label="Tasa de Interes(%):"
                        Placeholder="Porcentaje del 1 al 100"
                        Keyboard="Numeric"/>
-            <EntryCell x:Name="cuotas"
+                        <EntryCell x:Name="cuotas"
                        Label="N° de Cuotas:"
                        Keyboard="Numeric"/>
-        </TableSection>
-        <TableSection>
-            <ViewCell>
-                <ViewCell.View>
-                    <StackLayout>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="30"/>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="70"/>
 
-                            </Grid.ColumnDefinitions>
-                            <buttons:SfButton x:Name="btncalcular" 
+                                        </Grid.ColumnDefinitions>
+                                        <buttons:SfButton x:Name="btncalcular" 
                                     Text="Calcular"
                                     FontSize="20"
                                     CornerRadius="25"
                                     Grid.Column="1"
+                                    WidthRequest="200"
+                                                          
+                                    HorizontalOptions="Center"
+                                    HeightRequest="50"
                                     Clicked="btncalcular_Clicked">
-                                <buttons:SfButton.BackgroundGradient>
-                                    <gradient:SfRadialGradientBrush Radius="3">
-                                        <gradient:SfRadialGradientBrush.GradientStops>
-                                            <gradient:SfGradientStop Color="#2F9BDF" Offset="0"/>
-                                            <gradient:SfGradientStop Color="#279ce6" Offset="1"/>
-                                        </gradient:SfRadialGradientBrush.GradientStops>
-                                    </gradient:SfRadialGradientBrush>
-                                </buttons:SfButton.BackgroundGradient>
+                                            <buttons:SfButton.BackgroundGradient>
+                                                <gradient:SfRadialGradientBrush Radius="3">
+                                                    <gradient:SfRadialGradientBrush.GradientStops>
+                                                        <gradient:SfGradientStop Color="#D34CF4" Offset="0"/>
+                                                        <gradient:SfGradientStop Color="#D34CF4" Offset="1"/>
+                                                    </gradient:SfRadialGradientBrush.GradientStops>
+                                                </gradient:SfRadialGradientBrush>
+                                            </buttons:SfButton.BackgroundGradient>
 
 
-                            </buttons:SfButton>
+                                        </buttons:SfButton>
 
-                        </Grid>
-                    </StackLayout>
-                </ViewCell.View>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell.View>
 
-            </ViewCell>
+                        </ViewCell>
 
-        </TableSection>
-        <TableSection Title="Resultados">
-            <TextCell x:Name="lblMonto"
+                    </TableSection>
+                    <TableSection Title="Resultados">
+                        <TextCell x:Name="lblMonto"
                       Text="Monto Total:"
                       Detail="$0"/>
-            <TextCell x:Name="lblintereses"
+                        <TextCell x:Name="lblintereses"
                       Text="Intereses"
                       Detail="$0"/>
-            <TextCell x:Name="lbltintereses"
+                        <TextCell x:Name="lbltintereses"
                       Text="Total intereses"
                       Detail="$0"/>
-            <TextCell x:Name="lblcuota"
+                        <TextCell x:Name="lblcuota"
                       Text="Pago Por Cuota"
                       Detail="$0"/>
 
 
-        </TableSection>
+                    </TableSection>
 
-    </TableView>
+                </TableView>
+
+            </StackLayout>
+        </Grid>
+    </AbsoluteLayout>
+
+
+
+
 
 </ContentPage>

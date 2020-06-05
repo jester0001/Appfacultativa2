@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 mc:Ignorable="d"
+                 x:Class="Appfacultativa.PopUpEliminar" NavigationPage.HasNavigationBar="False">
+    <Frame HorizontalOptions="Center" VerticalOptions="Center" Padding="10,0">
+        
+        <StackLayout HeightRequest="190" WidthRequest="250" Margin="0,10,0,0">
+            <Label Text="Esta seguro de eliminar a:" FontAttributes="Bold" FontSize="16" Padding="0,15"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="nombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+                <Label Text="Telefono:" FontAttributes="Bold" FontSize="15" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="telefono" Text="{Binding telefono}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Cedula:" FontAttributes="Bold" FontSize="15" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="cedula" Text="{Binding cedula}" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+            </Grid>
+            <StackLayout VerticalOptions="End">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="cancelar" FontSize="12" Grid.Column="1" BackgroundColor="Transparent" Text="Cancelar" Clicked="cancelar_Clicked"></Button>
+                    <Button x:Name="eliminar" FontSize="13" TextColor="#DC595F" Grid.Column="2" BackgroundColor="White" Text="Eliminar" Clicked="eliminar_Clicked"/>
+                </Grid>
+            </StackLayout>
+            
+
+        </StackLayout>
+    </Frame>
+
+
+
+</popup:PopupPage>

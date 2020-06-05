@@ -250,7 +250,7 @@
                                            Source="dollar.png"
                                            x:Name="list">
                                         <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="Btnaddcliente_Clicked"/>
+                                            
                                         </Image.GestureRecognizers>
                                     </Image>
                                 </AbsoluteLayout>

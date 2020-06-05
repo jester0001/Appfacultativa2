@@ -22,7 +22,7 @@ namespace Appfacultativa.Vistas
         {
             if (string.IsNullOrWhiteSpace(montopres.Text) || string.IsNullOrWhiteSpace(Tasainter.Text) || string.IsNullOrWhiteSpace(cuotas.Text))
             {
-                await this.DisplayAlert("Aviso", "Completa los Datos. No seas Imbecil", "OK");
+                await this.DisplayAlert("Aviso", "Ingresa los datos", "OK");
 
             }
             else
@@ -41,10 +41,10 @@ namespace Appfacultativa.Vistas
             }
         }
 
-
-
-
-
+        private async void backarrow(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 
 

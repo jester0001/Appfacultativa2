@@ -11,17 +11,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.1.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.48" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.1.0.48" />
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.1.0.54" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.1.0.54" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Vistas\PopUpEliminar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Vistas\Addcliente.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

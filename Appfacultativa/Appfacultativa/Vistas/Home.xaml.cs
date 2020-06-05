@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using System.IO;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Appfacultativa.Models;
@@ -29,12 +30,16 @@ namespace Appfacultativa.Vistas
         async void Btnaddcliente_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Addcliente { BindingContext = new clientes() });
-            //((NavigationPage) this.Parent).PushAsync(new Addcliente());
+         
         }
 
         private void Btncalculaprestamo_Clicked(object sender, EventArgs e)
         {
             ((NavigationPage) this.Parent).PushAsync(new CalcuPrestamo());
         }
+
+       
+     
+    
     }
 }

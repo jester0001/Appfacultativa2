@@ -175,7 +175,7 @@
                     Text="Guardar"
                     FontSize="16"
                     WidthRequest="200"
-                            HeightRequest="50"
+                    HeightRequest="50"
                     CornerRadius="25"
                     x:Name="btaddcliente"
                     Clicked="btaddcliente_Clicked">

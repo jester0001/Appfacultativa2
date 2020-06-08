@@ -31,6 +31,7 @@ namespace Appfacultativa
 
 
             MainPage = new NavigationPage(new Appfacultativa.Vistas.Home());
+           // MainPage = new NavigationPage(new PopUpEliminar());
 
             MainPage.BackgroundColor = ColorConverters.FromHex("#F5F5F5");
             

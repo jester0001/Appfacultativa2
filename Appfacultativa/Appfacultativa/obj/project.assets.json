@@ -1351,23 +1351,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kevin Veliz\\.nuget\\packages\\": {},
+    "C:\\Users\\lars5\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj",
+      "projectUniqueName": "C:\\Users\\lars5\\Source\\Repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj",
       "projectName": "Appfacultativa",
-      "projectPath": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj",
-      "packagesPath": "C:\\Users\\Kevin Veliz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa\\obj\\",
+      "projectPath": "C:\\Users\\lars5\\Source\\Repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj",
+      "packagesPath": "C:\\Users\\lars5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lars5\\Source\\Repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kevin Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lars5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1449,7 +1449,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

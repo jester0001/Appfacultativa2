@@ -55,9 +55,8 @@ namespace Appfacultativa.Vistas
         [Obsolete]
         private async void listaclientes_SwipeEnded(object sender, Syncfusion.ListView.XForms.SwipeEndedEventArgs e)
         {
+            
             await PopupNavigation.PushAsync(new PopUpEliminar { BindingContext = e.ItemData as clientes });
-         
-           
         }
 
 

@@ -2600,24 +2600,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kevin Veliz\\.nuget\\packages\\": {},
+    "C:\\Users\\lars5\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa.Android\\Appfacultativa.Android.csproj",
+      "projectUniqueName": "C:\\Users\\lars5\\source\\repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa.Android\\Appfacultativa.Android.csproj",
       "projectName": "Appfacultativa.Android",
-      "projectPath": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa.Android\\Appfacultativa.Android.csproj",
-      "packagesPath": "C:\\Users\\Kevin Veliz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa.Android\\obj\\",
+      "projectPath": "C:\\Users\\lars5\\source\\repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa.Android\\Appfacultativa.Android.csproj",
+      "packagesPath": "C:\\Users\\lars5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lars5\\source\\repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kevin Veliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lars5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2631,8 +2631,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj": {
-              "projectPath": "C:\\Users\\Kevin Veliz\\source\\repos\\Appfacultativa\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj"
+            "C:\\Users\\lars5\\source\\repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj": {
+              "projectPath": "C:\\Users\\lars5\\source\\repos\\Appfacultativa2\\Appfacultativa\\Appfacultativa\\Appfacultativa.csproj"
             }
           }
         }

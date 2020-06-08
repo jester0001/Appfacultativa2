@@ -15,3 +15,20 @@ C:\Users\Kevin Veliz\source\repos\Appfacultativa\Appfacultativa\Appfacultativa\b
 C:\Users\Kevin Veliz\source\repos\Appfacultativa\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\ref\Appfacultativa.dll
 C:\Users\Kevin Veliz\source\repos\Appfacultativa\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\Appfacultativa.pdb
 C:\Users\Kevin Veliz\source\repos\Appfacultativa\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\Appfacultativa.deps.json
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\Appfacultativa.dll
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\ref\Appfacultativa.dll
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\bin\Debug\netstandard2.0\Appfacultativa.pdb
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Vistas\Addcliente.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Vistas\CalcuPrestamo.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Vistas\Home.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Vistas\Listcliente.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Vistas\PopUpEliminar.xaml.g.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Appfacultativa.csproj.CoreCompileInputs.cache
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Appfacultativa.AssemblyInfoInputs.cache
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Appfacultativa.AssemblyInfo.cs
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Appfacultativa.dll
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\ref\Appfacultativa.dll
+C:\Users\lars5\Source\Repos\Appfacultativa2\Appfacultativa\Appfacultativa\obj\Debug\netstandard2.0\Appfacultativa.pdb

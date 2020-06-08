@@ -26,7 +26,8 @@ namespace Appfacultativa
             var client = (clientes)BindingContext;
             await App.Database.deleteclienteAsync(client);
             await PopupNavigation.PopAsync();
-           
+            await Navigation.PushAsync(new Listcliente(), true);
+
         }
 
         [Obsolete]

@@ -7,6 +7,7 @@ Syncfusion.SfComboBox.XForms.Android
 Syncfusion.SfListView.XForms.Android
 Syncfusion.SfMaskedEdit.XForms.Android
 Syncfusion.SfPopupLayout.XForms.Android
+Syncfusion.SfPullToRefresh.XForms.Android
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

@@ -4,40 +4,44 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+          
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
              mc:Ignorable="d"
-             x:Class="Appfacultativa.Vistas.Listcliente" Title="Clientes" NavigationPage.HasNavigationBar="False">
+             x:Class="Appfacultativa.Vistas.Listcliente" Title="Clientes" NavigationPage.HasNavigationBar="False"
+             xmlns:pull="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             >
 
 
 
     <!-- todo el navbar y la media luna del color de la funcion que se haya ejecutado -->
-    
-        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+
+
+    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
                     AbsoluteLayout.LayoutFlags="All">
 
-            <Grid RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <!--Falsa Navbar-->
-                <border:SfBorder BackgroundColor="#AAB0E9"
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Falsa Navbar-->
+            <border:SfBorder BackgroundColor="#AAB0E9"
                                  BorderWidth="0"
                                  HeightRequest="50"
                                  Grid.Row="0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <!--Boton Back-->
-                        <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
-                            <border:SfBorder
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boton Back-->
+                    <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
+                        <border:SfBorder
                            BackgroundColor="Transparent"
                         BorderWidth="0"
                              
@@ -45,21 +49,21 @@
                            
                             WidthRequest="40">
 
-                                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="backarrow"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="backarrow"/>
+                                </Image.GestureRecognizers>
+                            </Image>
 
 
-                            </border:SfBorder>
+                        </border:SfBorder>
 
-                        </StackLayout>
+                    </StackLayout>
 
-                        <!--Boton plus-->
+                    <!--Boton plus-->
 
-                        <StackLayout HorizontalOptions="End" Grid.Column="2" Padding="20,10">
-                            <border:SfBorder
+                    <StackLayout HorizontalOptions="End" Grid.Column="2" Padding="20,10">
+                        <border:SfBorder
                            BackgroundColor="Transparent"
                         BorderWidth="0"
                              
@@ -67,79 +71,79 @@
                            
                             WidthRequest="40">
 
-                                <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="plus.png" x:Name="plus">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="ToolbarItem_Clicked"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="plus.png" x:Name="plus">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ToolbarItem_Clicked"/>
+                                </Image.GestureRecognizers>
+                            </Image>
 
 
-                            </border:SfBorder>
+                        </border:SfBorder>
 
-                        </StackLayout>
-
-
-                    </Grid>
-                </border:SfBorder>
-                <border:SfBorder Grid.Row="1" BorderWidth="0">
-                    <Image Source="forlistacliente.png" Aspect="AspectFill"></Image>
-
-                </border:SfBorder>
-                <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
-                    <Label Text="Clientes" FontSize="25" TextColor="White"/>
-                </StackLayout>
-                <!--fin de la parte de la media luna y la falsa navbar-->
+                    </StackLayout>
 
 
+                </Grid>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forlistacliente.png" Aspect="AspectFill"></Image>
 
-                <!--Lista de clientes-->
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Clientes" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
 
 
-                <StackLayout Grid.Row="2">
-                    <syncfusion:SfListView x:Name="listaclientes" ItemSize="85" ItemTapped="listaclientes_ItemTapped" 
+
+            <!--Lista de clientes-->
+
+
+            <StackLayout Grid.Row="2">
+                <syncfusion:SfListView x:Name="listaclientes" ItemSize="85" ItemTapped="listaclientes_ItemTapped" 
                                        SwipeEnded="listaclientes_SwipeEnded" SwipeReset="listaclientes_SwipeReset" AllowSwiping="True" SelectionMode="None" SwipeOffset="100" SwipeThreshold="30">
 
-                        <syncfusion:SfListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Padding="2"  Margin="1">
-                                    <Frame x:Name="frame" HasShadow="True" Padding="0" Margin="0">
-                                        <StackLayout>
-                                            <Label Text="{Binding nombre}" FontAttributes="Bold" FontSize="15"/>
-                                            <Label Text="{Binding telefono}"/>
-                                            <Label Text="{Binding cedula}"/>
+                    <syncfusion:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="2"  Margin="1">
+                                <Frame x:Name="frame" HasShadow="True" Padding="0" Margin="0">
+                                    <StackLayout>
+                                        <Label Text="{Binding nombre}" FontAttributes="Bold" FontSize="15"/>
+                                        <Label Text="{Binding telefono}"/>
+                                        <Label Text="{Binding cedula}"/>
 
-                                        </StackLayout>
-                                    </Frame>
-                                </Grid>
-                            </DataTemplate>
-                        </syncfusion:SfListView.ItemTemplate>
-                        <syncfusion:SfListView.LeftSwipeTemplate>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:SfListView.ItemTemplate>
+                    <syncfusion:SfListView.LeftSwipeTemplate>
 
-                            <DataTemplate x:Name="desliz_izquierda" >
+                        <DataTemplate x:Name="desliz_izquierda" >
 
-                                <Grid>
-                                    <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
-                                        <Grid VerticalOptions="Center" HorizontalOptions="Center">
-                                            <Image Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" HeightRequest="35" WidthRequest="35" Source="delete.png">
+                            <Grid>
+                                <Grid BackgroundColor="#DC595F" HorizontalOptions="Fill" VerticalOptions="Fill" Grid.Column="0">
+                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" HeightRequest="35" WidthRequest="35" Source="delete.png">
 
-                                            </Image>
-                                        </Grid>
+                                        </Image>
                                     </Grid>
                                 </Grid>
-                            </DataTemplate>
-                        </syncfusion:SfListView.LeftSwipeTemplate>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:SfListView.LeftSwipeTemplate>
 
-                    </syncfusion:SfListView>
+                </syncfusion:SfListView>
 
-                </StackLayout>
-
-            </Grid>
-
+            </StackLayout>
 
 
-        </ScrollView>
+
+        </Grid>
 
 
+
+    </ScrollView>
 
 
 

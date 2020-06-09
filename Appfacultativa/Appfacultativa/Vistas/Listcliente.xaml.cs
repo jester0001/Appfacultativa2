@@ -9,6 +9,7 @@ using Rg.Plugins.Popup.Services;
 
 using Xamarin.Forms.Xaml;
 using Appfacultativa.Models;
+using Appfacultativa.Vistas;
 
 namespace Appfacultativa.Vistas
 {
@@ -19,8 +20,11 @@ namespace Appfacultativa.Vistas
         public Listcliente()
         {
             InitializeComponent();
+          
+            
 
         }
+
 
         async void ToolbarItem_Clicked(object sender, EventArgs e)
         {

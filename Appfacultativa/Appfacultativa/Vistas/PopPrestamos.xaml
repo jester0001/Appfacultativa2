@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.PopPrestamos" NavigationPage.HasNavigationBar="False">
+    <Frame HorizontalOptions="Center" VerticalOptions="Center" Padding="10,0">
+
+        <StackLayout HeightRequest="300" WidthRequest="300" Margin="0,5,0,0">
+            <Label Text="Detalles del Prestamo" FontAttributes="Bold" FontSize="16" Padding="0,5"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Cliente:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtcliente" Text="{Binding cliente}" Grid.Row="0" Grid.Column="1" VerticalOptions="End" />
+                <Label Text="Monto Total:" FontAttributes="Bold" FontSize="15" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="montotal" Text="{Binding montoTotal}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Intereses:" FontAttributes="Bold" FontSize="15" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtintereses" Text="{Binding interes}" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="% Interes:" FontAttributes="Bold" FontSize="15" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtporinterest" Text="{Binding porceninteres}" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Pago Por Cuota:" FontAttributes="Bold" FontSize="15" Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtpagcuota" Text="{Binding cuota}" Grid.Row="4" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Monto Prestado:" FontAttributes="Bold" FontSize="15" Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtmontoneto" Text="{Binding monto}" Grid.Row="5" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Saldo Restante:" FontAttributes="Bold" FontSize="15" Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtsaldorest" Text="{Binding saldorest}" TextColor="#DC595F" Grid.Row="6" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Saldo Pagado:" FontAttributes="Bold" FontSize="15" Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtsaldopag" Text="{Binding saldopagado}" TextColor="#02C768" Grid.Row="7" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Cuotas:" FontAttributes="Bold" FontSize="15" Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtcuotas" Text="{Binding meses}" Grid.Row="8" Grid.Column="1" VerticalOptions="Center"/>
+                <Label Text="Fecha:" FontAttributes="Bold" FontSize="15" Grid.Row="9" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label x:Name="txtfecha" Text="{Binding fechaprestamo}" Grid.Row="9" Grid.Column="1" VerticalOptions="Center"/>
+
+
+
+            </Grid>
+
+        </StackLayout>
+    </Frame>
+
+</popup:PopupPage>

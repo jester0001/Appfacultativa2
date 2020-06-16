@@ -6,9 +6,6 @@
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" 
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              mc:Ignorable="d"
-             
-             
-             
              x:Class="Appfacultativa.Vistas.Home" Title="Lorem Ipsum" NavigationPage.HasNavigationBar="False">
   
   <StackLayout>
@@ -18,7 +15,7 @@
                                  BorderWidth="0"
                                  HeightRequest="55">
                     <StackLayout HorizontalOptions="Start" Padding="20,10">
-                        <Label Text="Lorem Ipsum" TextColor="Black" FontAttributes="Bold" FontSize="23"></Label>
+                        <Label Text="Registro Facil de Prestamos" TextColor="Black" FontAttributes="Bold" FontSize="23"></Label>
                         
                     </StackLayout>
                     
@@ -195,6 +192,9 @@
                                            AbsoluteLayout.LayoutFlags="All"
                                            Source="nuevo.png"
                                            x:Name="prestamo">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="btnprestamo"/>
+                                        </Image.GestureRecognizers>
 
                                     </Image>
                                 </AbsoluteLayout>
@@ -214,7 +214,7 @@
 
                     </border:SfBorder>
 
-                    <!--Prestamos-->
+                    <!--Creditos-->
                     <border:SfBorder BackgroundColor="White"
                                      BorderWidth="0"
                                      CornerRadius="25"
@@ -250,7 +250,7 @@
                                            Source="dollar.png"
                                            x:Name="list">
                                         <Image.GestureRecognizers>
-                                            
+                                            <TapGestureRecognizer Tapped="btncreditos"/>
                                         </Image.GestureRecognizers>
                                     </Image>
                                 </AbsoluteLayout>
@@ -302,6 +302,9 @@
                                            AbsoluteLayout.LayoutFlags="All"
                                            Source="card.png"
                                            x:Name="pagos">
+                                        <Image.GestureRecognizers>
+                                          
+                                        </Image.GestureRecognizers>
 
                                     </Image>
                                 </AbsoluteLayout>

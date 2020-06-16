@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.Listaprestamos" NavigationPage.HasNavigationBar="False">
+    <!-- todo el navbar y la media luna del color de la funcion que se haya ejecutado -->
+
+    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Falsa Navbar-->
+            <border:SfBorder BackgroundColor="#FDC250"
+                                 BorderWidth="0"
+                                 HeightRequest="50"
+                                 Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boton Back-->
+                    <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
+                        <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="backarrow"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+                    <!--Boton plus-->
+
+                    <StackLayout HorizontalOptions="End" Grid.Column="2" Padding="20,10">
+                        <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="plus.png" x:Name="plus">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="plusnewprestamo"/>
+
+                                </Image.GestureRecognizers>
+                            </Image>
+
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+
+                </Grid>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forcreditos.png" Aspect="AspectFill"></Image>
+
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Creditos" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
+
+
+
+            <!--Lista de clientes-->
+            <StackLayout Margin="0,20,0,0" Grid.Row="2">
+                <syncfusion:SfListView x:Name="allprestamos" ItemTapped="allprestamos_ItemTapped" ItemHolding="allprestamos_ItemHolding" ItemSize="80" SelectionMode="None" SwipeOffset="50" SwipeThreshold="30">
+
+                    <syncfusion:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="2"  Margin="1">
+                                <Frame x:Name="frame" HasShadow="True" Padding="0" Margin="0">
+                                    <Grid Padding="6,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Label Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding cliente}" FontAttributes="Bold" FontSize="15"/>
+                                        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" Text="{Binding montoTotal}"/>
+                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding saldopagado}" TextColor="#02C768"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding saldorest}" TextColor="#DC595F"/>
+                                        
+                                        <Label Grid.Row="3" Grid.ColumnSpan="4" FontSize="10" HorizontalOptions="End" Text="{Binding fechaprestamo}"/>
+
+
+                                    </Grid>
+                                
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:SfListView.ItemTemplate>
+                </syncfusion:SfListView>
+
+
+
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

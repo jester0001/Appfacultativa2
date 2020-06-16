@@ -95,9 +95,9 @@
                 <!--Lista de clientes-->
 
 
-                <StackLayout Grid.Row="2">
+                <StackLayout Margin="0,20,0,0" Grid.Row="2">
                     <syncfusion:SfListView x:Name="listaclientes" ItemSize="85" ItemTapped="listaclientes_ItemTapped" 
-                                       SwipeEnded="listaclientes_SwipeEnded" SwipeReset="listaclientes_SwipeReset" AllowSwiping="True" SelectionMode="None" SwipeOffset="100" SwipeThreshold="30">
+                                       SwipeEnded="listaclientes_SwipeEnded" SwipeReset="listaclientes_SwipeReset" AllowSwiping="True" SelectionMode="None" SwipeOffset="50" SwipeThreshold="30">
 
                         <syncfusion:SfListView.ItemTemplate>
                             <DataTemplate>

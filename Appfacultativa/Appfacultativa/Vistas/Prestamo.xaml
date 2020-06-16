@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sfswitch="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.Prestamo" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
+                <Setter Property="FontSize" Value="18"></Setter>
+
+            </Style>
+            <Style TargetType="border:SfBorder">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="BorderColor" Value="Transparent"></Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="BorderWidth" Value="1"></Setter>
+
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="Margin" Value="15,0"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+            </Style>
+
+            <Style TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="ContainerBackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="FocusedColor" Value="#02C768"></Setter>
+                <Setter Property="UnfocusedColor" Value="LightGray"></Setter>
+                <Setter Property="OutlineCornerRadius" Value="8"></Setter>
+                <Setter Property="InputViewPadding" Value="6"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Falsa Navbar-->
+            <border:SfBorder BackgroundColor="#02C768"
+                                 BorderWidth="0"
+                                 HeightRequest="50"
+                                 Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boton Back-->
+                    <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
+                        <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="backarrow"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+                </Grid>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forprestamo.png" Aspect="AspectFill"></Image>
+
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Prestamo" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
+
+
+            <StackLayout Grid.Row="2" Padding="20">
+                <border:SfBorder Grid.Row="2" Padding="20" HeightRequest="450" WidthRequest="70" CornerRadius="15">
+                    <StackLayout>
+
+                        <!--Cliente-->
+                        <border:SfBorder>
+                            <combobox:SfComboBox x:Name="combocliente" Watermark="Selecione Un Cliente" WatermarkColor="LightGray" DropDownBorderColor="#02C768">
+                              
+                            </combobox:SfComboBox>
+
+
+
+
+                        </border:SfBorder>
+
+                        <!--Monto-->
+                        <border:SfBorder>
+
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Monto">
+                                <Entry x:Name="txtmonto"
+                           Keyboard="Numeric"
+                           Text="{Binding monto}">
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                        </border:SfBorder>
+
+                        <!--Meses-->
+                        <border:SfBorder>
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Meses">
+
+                                <Entry x:Name="txtmeses" Text="{Binding meses}" Keyboard="Numeric">
+
+
+                                </Entry>
+
+                            </inputLayout:SfTextInputLayout>
+
+                        </border:SfBorder>
+                        
+                        <!--porcentaje de Intereses-->
+                        <border:SfBorder>
+                            <inputLayout:SfTextInputLayout
+                    ContainerType="Outlined"
+                    Hint="Porcentaje de interes">
+
+                                <Entry x:Name="txtproceninter" Text="{Binding porceninteres}" Keyboard="Numeric">
+
+
+                                </Entry>
+
+                            </inputLayout:SfTextInputLayout>
+
+                        </border:SfBorder>
+
+                     
+                        <!--Boton guardar-->
+                        <buttons:SfButton
+                    HorizontalOptions="Center"
+                    Margin="0,24,0,0"
+                    Text="Guardar"
+                    FontSize="16"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    x:Name="btaddcliente"
+                            Clicked="btguardarprestamo"
+                    >
+                            <buttons:SfButton.BackgroundGradient>
+                                <gradient:SfRadialGradientBrush Radius="3">
+                                    <gradient:SfRadialGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#02C768" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#02C768" Offset="1"/>
+                                    </gradient:SfRadialGradientBrush.GradientStops>
+                                </gradient:SfRadialGradientBrush>
+                            </buttons:SfButton.BackgroundGradient>
+                        </buttons:SfButton>
+                    </StackLayout>
+                </border:SfBorder>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+
+
+</ContentPage>

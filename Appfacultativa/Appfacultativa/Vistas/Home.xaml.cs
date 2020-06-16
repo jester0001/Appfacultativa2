@@ -38,8 +38,16 @@ namespace Appfacultativa.Vistas
             ((NavigationPage) this.Parent).PushAsync(new CalcuPrestamo());
         }
 
+        async void btnprestamo(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Prestamo { BindingContext = new prestamos() });
+        }
+
+        private void btncreditos(object sender, EventArgs e)
+        {
+            ((NavigationPage)this.Parent).PushAsync(new Listaprestamos());
+        }
+
        
-     
-    
     }
 }

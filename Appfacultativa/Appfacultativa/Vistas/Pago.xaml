@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             x:Class="Appfacultativa.Vistas.Pago" NavigationPage.HasNavigationBar="False" >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="border:SfBorder">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="BorderColor" Value="Transparent"></Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="BorderWidth" Value="1"></Setter>
+
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="Margin" Value="15,0"></Setter>
+                <Setter Property="HeightRequest" Value="40"></Setter>
+                <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+            </Style>
+
+            <Style TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="ContainerBackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="FocusedColor" Value="#5579C7"></Setter>
+                <Setter Property="UnfocusedColor" Value="LightGray"></Setter>
+                <Setter Property="OutlineCornerRadius" Value="8"></Setter>
+                <Setter Property="InputViewPadding" Value="6"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <!-- todo el navbar y la media luna del color de la funcion que se haya ejecutado -->
+
+    <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Falsa Navbar-->
+            <border:SfBorder BackgroundColor="#FE7582"
+                                 BorderWidth="0"
+                                 HeightRequest="50"
+                                 Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Boton Back-->
+                    <StackLayout HorizontalOptions="Start" Grid.Column="0" Padding="20,10">
+                        <border:SfBorder
+                           BackgroundColor="Transparent"
+                        BorderWidth="0"
+                             
+                            HeightRequest="100"
+                           
+                            WidthRequest="40">
+
+                            <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds=".5,.5,.5,.5" Source="back.png" x:Name="actBack">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="backarrow"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+
+                        </border:SfBorder>
+
+                    </StackLayout>
+
+                </Grid>
+            </border:SfBorder>
+            <border:SfBorder Grid.Row="1" BorderWidth="0">
+                <Image Source="forpago.png" Aspect="AspectFill"></Image>
+
+            </border:SfBorder>
+            <StackLayout Grid.Row="1"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <Label Text="Pago de Cuota" FontSize="25" TextColor="White"/>
+            </StackLayout>
+            <!--fin de la parte de la media luna y la falsa navbar-->
+
+
+            <!--datos-->
+            <StackLayout Grid.Row="2" Padding="20">
+                <border:SfBorder Grid.Row="2" Padding="20" HeightRequest="450" WidthRequest="70" CornerRadius="15">
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!--Nombre del cliente-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="0" Grid.ColumnSpan="3"
+                        ContainerType="Outlined"
+                        Hint="Nombre o Alias">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtnombrecliente"
+                           Text="{Binding cliente}">
+
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Monto Total-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="1" Grid.Column="0"
+                        ContainerType="Outlined"
+                        Hint="Monto Total">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtmontoTotal"
+                           Text="{Binding montoTotal}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Intereses-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="2" Grid.Column="0"
+                        ContainerType="Outlined"
+                        Hint="Interes">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtinteres"
+                           Text="{Binding interes}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Pago Cuota-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="3" Grid.Column="0"
+                        ContainerType="Outlined"
+                        Hint="Pago Cuota">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtpagcuota"
+                           Text="{Binding cuota}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Pago Restante-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="4" Grid.Column="0"
+                        ContainerType="Outlined"
+                        Hint="Saldo Restante">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtsaldotresta"
+                           Text="{Binding saldorest}" TextColor="#DC595F">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Monto-->
+
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="1" Grid.Column="2"
+                        ContainerType="Outlined"
+                        Hint="Monto">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtmonto"
+                           Text="{Binding monto}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--Porcentaje Interes-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="2 " Grid.Column="2"
+                        ContainerType="Outlined"
+                        Hint="% Interes">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtporceninteres"
+                           Text="{Binding porceninteres}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--cuotas arreglas-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="3 " Grid.Column="2"
+                        ContainerType="Outlined"
+                        Hint="Arreglo de Cuotas">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtmes"
+                           Text="{Binding meses}">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                            <!--cuotas pagadas-->
+                            <inputLayout:SfTextInputLayout
+                            Grid.Row="4 " Grid.Column="2"
+                        ContainerType="Outlined"
+                        Hint="Saldo Pagado">
+                                <Entry IsReadOnly="True"
+                           x:Name="txtsaldopagado"
+                           Text="{Binding saldopagado}" TextColor="#02C768">
+                                </Entry>
+                            </inputLayout:SfTextInputLayout>
+                        </Grid>
+                        <buttons:SfButton
+                    HorizontalOptions="Center"
+                    Margin="0,24,0,0"
+                    Text="Pagar Cuota"
+                    FontSize="16"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    x:Name="btnpagocuota"
+                   Clicked="btnpagocuota_Clicked">
+
+
+                            <buttons:SfButton.BackgroundGradient>
+                                <gradient:SfRadialGradientBrush Radius="3">
+                                    <gradient:SfRadialGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#FE7582" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#FE7582" Offset="1"/>
+                                    </gradient:SfRadialGradientBrush.GradientStops>
+                                </gradient:SfRadialGradientBrush>
+                            </buttons:SfButton.BackgroundGradient>
+                        </buttons:SfButton>
+
+                    </StackLayout>
+
+                </border:SfBorder>
+
+
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

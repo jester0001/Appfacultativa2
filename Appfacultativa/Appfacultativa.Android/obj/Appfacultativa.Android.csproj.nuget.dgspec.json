@@ -44,7 +44,7 @@
           "dependencies": {
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[2.0.0.2, )"
+              "version": "[2.0.0.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -52,7 +52,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.800, )"
+              "version": "[4.6.0.847, )"
             }
           }
         }
@@ -104,31 +104,31 @@
             },
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[2.0.0.2, )"
+              "version": "[2.0.0.3, )"
             },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Syncfusion.Xamarin.Core": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Syncfusion.Xamarin.SfComboBox": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Syncfusion.Xamarin.SfMaskedEdit": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Syncfusion.Xamarin.SfPopupLayout": {
               "target": "Package",
-              "version": "[18.1.0.54, )"
+              "version": "[18.1.0.57, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -136,7 +136,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.800, )"
+              "version": "[4.6.0.847, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

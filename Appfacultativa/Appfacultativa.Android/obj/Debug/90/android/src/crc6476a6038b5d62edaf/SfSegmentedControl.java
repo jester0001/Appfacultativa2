@@ -13,6 +13,8 @@ public class SfSegmentedControl
 			"n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler\n" +
 			"n_onMeasure:(II)V:GetOnMeasure_IIHandler\n" +
 			"n_onDraw:(Landroid/graphics/Canvas;)V:GetOnDraw_Landroid_graphics_Canvas_Handler\n" +
+			"n_getLayoutDirection:()I:GetGetLayoutDirectionHandler\n" +
+			"n_setLayoutDirection:(I)V:GetSetLayoutDirection_IHandler\n" +
 			"";
 		mono.android.Runtime.register ("Syncfusion.Android.Buttons.SfSegmentedControl, Syncfusion.Buttons.XForms.Android", SfSegmentedControl.class, __md_methods);
 	}
@@ -72,6 +74,22 @@ public class SfSegmentedControl
 	}
 
 	private native void n_onDraw (android.graphics.Canvas p0);
+
+
+	public int getLayoutDirection ()
+	{
+		return n_getLayoutDirection ();
+	}
+
+	private native int n_getLayoutDirection ();
+
+
+	public void setLayoutDirection (int p0)
+	{
+		n_setLayoutDirection (p0);
+	}
+
+	private native void n_setLayoutDirection (int p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

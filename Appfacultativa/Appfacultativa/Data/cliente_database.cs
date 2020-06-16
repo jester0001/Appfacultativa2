@@ -15,6 +15,7 @@ namespace Appfacultativa.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<clientes>().Wait();
+            _database.CreateTableAsync<prestamos>().Wait();
         }
 
         public Task<List<clientes>> GetClientesAsync()
@@ -45,6 +46,32 @@ namespace Appfacultativa.Data
         public Task<int> deleteclienteAsync(clientes Clientes)
         {
             return _database.DeleteAsync(Clientes);
+        }
+
+        ///Para el models de prestamos
+
+        public Task<List<prestamos>> GetPrestamosAsync()
+        {
+            return _database.Table<prestamos>().ToListAsync();
+        }
+
+        public Task<prestamos> GetPrestamosAsync(int id)
+        {
+            return _database.Table<prestamos>().Where(i => i.IDPrestamo == id)
+                .FirstOrDefaultAsync();
+        }
+
+        public Task<int> saveprestamoAsync(prestamos Prestamos)
+        {
+            if (Prestamos.IDPrestamo != 0)
+            {
+                return _database.UpdateAsync(Prestamos);
+            }
+            else
+            {
+                return _database.InsertAsync(Prestamos);
+            }
+
         }
 
     }

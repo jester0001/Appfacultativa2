@@ -28,12 +28,10 @@ namespace Appfacultativa
 
             InitializeComponent();
 
-
-
             MainPage = new NavigationPage(new Appfacultativa.Vistas.Home());
 
             MainPage.BackgroundColor = ColorConverters.FromHex("#F5F5F5");
-            
+
         }
 
         protected override void OnStart()

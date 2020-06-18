@@ -17,25 +17,25 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="80"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" FontSize="13" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
                 <Label x:Name="nombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
-                <Label Text="Telefono:" FontAttributes="Bold" FontSize="15" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Text="Telefono:" FontAttributes="Bold" FontSize="13" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
                 <Label x:Name="telefono" Text="{Binding telefono}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
-                <Label Text="Cedula:" FontAttributes="Bold" FontSize="15" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Label Text="Cedula:" FontAttributes="Bold" FontSize="13" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
                 <Label x:Name="cedula" Text="{Binding cedula}" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
             </Grid>
             <StackLayout VerticalOptions="End">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="cancelar" FontSize="12" Grid.Column="1" BackgroundColor="Transparent" Text="Cancelar" Clicked="cancelar_Clicked"></Button>
-                    <Button x:Name="eliminar" FontSize="13" TextColor="#DC595F" Grid.Column="2" BackgroundColor="White" Text="Eliminar" Clicked="eliminar_Clicked"/>
+                    <Button x:Name="cancelar" FontSize="11" Grid.Column="1" BackgroundColor="Transparent" Text="Cancelar" Clicked="cancelar_Clicked"></Button>
+                    <Button x:Name="eliminar" FontSize="11" TextColor="#DC595F" Grid.Column="2" BackgroundColor="White" Text="Eliminar" Clicked="eliminar_Clicked"/>
                 </Grid>
             </StackLayout>
             

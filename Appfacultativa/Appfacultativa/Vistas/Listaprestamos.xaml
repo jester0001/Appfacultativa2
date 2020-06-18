@@ -112,11 +112,11 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        
-                                        <Label Grid.Row="0" Grid.ColumnSpan="4" Text="{Binding cliente}" FontAttributes="Bold" FontSize="15"/>
-                                        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" Text="{Binding montoTotal}"/>
-                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding saldopagado}" TextColor="#02C768"/>
-                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding saldorest}" TextColor="#DC595F"/>
+
+                                        <Label Grid.Row="0" Grid.ColumnSpan="4"  Text="{Binding cliente}" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" Text="{Binding montoTotal}" FontSize="12"/>
+                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding saldopagado}" TextColor="#02C768" FontSize="12"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding saldorest}" TextColor="#DC595F" FontSize="12"/>
                                         
                                         <Label Grid.Row="3" Grid.ColumnSpan="4" FontSize="10" HorizontalOptions="End" Text="{Binding fechaprestamo}"/>
 

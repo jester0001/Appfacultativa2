@@ -9,9 +9,13 @@ using Android.OS;
 
 namespace Appfacultativa.Droid
 {
-    [Activity(Label = "Appfacultativa", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Credit Note", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+       
+        //---* evento oncreate de la clase cuando se crea 
+        //* ha sido comentariado por que se reescribio para el uso de RG-pop
+        
         //protected override void OnCreate(Bundle savedInstanceState)
         //{
         //    TabLayoutResource = Resource.Layout.Tabbar;

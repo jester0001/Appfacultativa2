@@ -3,8 +3,8 @@
 	.section	.rodata..L.str.1,"aMS",@progbits,1
 	.type	.L.str.1, @object
 .L.str.1:
-	.asciz	"com.companyname.appfacultativa"
-	.size	.L.str.1, 31
+	.asciz	"Credit_Note.Credit_Note"
+	.size	.L.str.1, 24
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -63,7 +63,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"509b3993-40c6-4b45-a31f-e8e4bdfecb2a"
+	.asciz	"494ea981-f754-45fc-9348-5a36d5fa96ef"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object
